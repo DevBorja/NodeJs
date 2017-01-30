@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "security-training-system",
+  "private_key_id": "d627c4c292a794c8a326219601adef54c9ba5705",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2RGT7pdilVa3y\n+4pktaW6UR73JNkH9r+93awXTCgj3FL/vBhbfiYU3uiT4EuTr9SIUWOHxHlVK12T\nznQsWREEPOo5vIhhfpfpEzZSW29FOwSZG9OgsrbhYJP/ebVrF+7Q+vp3cbhA/QLX\nMz0uSExrDf5oQcrBNkZDNW7KQjDh1OZl3gFZvWLimP2o0YdaR2C2U1wEXm2T8zzH\nF23QiUpJHq4irAhDk8j1WgWpb9y30/3XnAQ/OJRF0a6+kjfgK00a4dnHyAuvR9GE\n+ZLVpLaBqFpfaj59tZO7bv8vSMgxYVcmz2qq+/3IDa0oq1d4ZLJGMVYOJulgcV0D\nJHnTl9yrAgMBAAECggEADyeGoem7JpwGF4LUkeUMf35JLdFRfjkE3jt1GIbLe5fR\nCtRPziOh9PBHtCvc/M2MxTzHIr2yPOObJzPuMtXA9XI/I0fKqxiEduuTA6v4h3AN\nxNEselsBm6GVDJPJArt9rsB/XLkG0dh3iP8IojV+rRP/yBlYS1JA60uhB44TVGNk\nOSiEwb16ZiRHEVZBiGYWMkUOJcz/q3RBsrKjZvmFL+P8gK2hnO+WaTWgGEnp1Ouj\nhqLke57nXK/xDaqbMq6qPUo6kOtX7TLIZ9Aytar7OE/uOVBiWx8HnhfiEW3yEvZ3\nbf/OT2n13qDLmKrUC6cPa6z7bNiFlUQ/l8GLrQ5bqQKBgQDmsNZ8p0HbxVZ+xv/X\nzcmUeh9+Fn8m7F9S7NVoJ0t4lf3prTp2Q5jwMiojZ5WO3+WbZr3LNBxBeZnDqXEh\n2BNRB6UyvxMZiEJ4AUg68xZrlI7tpYH3ej3iXfqqJ5Bd7nz1B8PYxTpVfSIlKG6W\npCkyb+7WygxUqh+YUzF7Zt/phwKBgQDKQ4kAkv6BKmH2j6JJtcI4pppcLJXGhBBD\n6t+XjjsiNL2ea3ozfombIf5B6i+FqjJMWMtIqfuIC+kYoCmMjSaNb9CORJyp9sjz\nWXmxb++8m0xTuIQtGmxV7x6JfkzOAagum6zLZFuZ44fHo3oHs29E41k7MtE5J+14\nY8lNIwDsvQKBgQCYty52fN8LVxsIeEJ8IV417ZaViN0J7ma4ZdJszb6XiGv72tKd\n4egH8p2UrIkEeVHty1kPgWLHMXHKZoxfRESdWrtQ2c8SEvM1sFuZsrz/4OuxhOSB\n6Sm4hlBffiuDE1Mjfs123jHc0CbfhGGZVflzy0fIZx88mRarZz+VmqfWVwKBgDTg\ndPeGdix0VQntQOL+NlkzDNWd/kXYjpwC0hM/5qupmAzLUjYWFYlN2LeIroXGGcIl\n0HcdoRlO69A5RsNsvzBok+AthbtVPfGIaaz+c3EeNFUKvts/tiS9D4GoWBHfEwWk\nQwclJGFVv1Bsp2FOAn/C47f7MAE+M/GuPJkC1qINAoGAdJNM1O09xvJeSm8cbajt\nrxBe0nzDOFdcy8cvcRfCHJgLUvalvM9zfSoV+2uHec0CJYRz0vGIYr0IrArmkgwW\nFYBeqgf9EFXXjBYV+1RYrYKdXyIDiiU/u2GT0hp+agENjgHcGHkE/MWW1qO5D7L5\nyhHKKto/PEr1B+EODLQmp7E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "borjapruebas@security-training-system.iam.gserviceaccount.com",
+  "client_id": "116328772155912533312",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/borjapruebas%40security-training-system.iam.gserviceaccount.com"
+}

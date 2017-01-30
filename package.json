@@ -1,0 +1,25 @@
+{
+  "name": "holaexpres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevBorja/NodeJs.git"
+  },
+  "author": "borja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevBorja/NodeJs/issues"
+  },
+  "homepage": "https://github.com/DevBorja/NodeJs#readme",
+  "dependencies": {
+    "body-parser": "^1.5.1",
+    "express": "^4.14.1",
+    "firebase": "^3.6.7",
+    "method-override": "^2.1.2"
+  }
+}
