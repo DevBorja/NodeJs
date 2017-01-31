@@ -3,7 +3,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     firebase = require("firebase"),
-    config = require('./config');
+    crypto = require('crypto');
+config = require('./config');
 
 firebase.initializeApp({
     serviceAccount: "Security Training System-a15133fc4d08.json",
@@ -24,23 +25,44 @@ app.post("/receta/add", function(req, res) {
     var duration = req.query.duration;
     var ingredients = req.query.ingredients;
 
-    console.log(title, description, duration, ingredients);
-
-    if (typeof title ==="undefined"  || typeof description ==="undefined"  || typeof duration ==="undefined" || typeof ingredients ==="undefined" )  {
+    if (typeof title === "undefined" || typeof description === "undefined" || typeof duration === "undefined" || typeof ingredients === "undefined") {
         res.send('err')
     } else {
-        var Id = Math.round(Math.random()*10000);
-        var db = firebase.database();
-        var ref = db.ref("recetasDB/recetas")
-        var usersRef = ref.child(Id);
-        usersRef.set({
-            titulo: title,
-            descripcion: description,
-            duracion: duration,
-            ingredientes: ingredients
-        });
-        res.send('receta añadida');
+        var Id = crypto.createHash('md5').update(title + description + duration + ingredients).digest("hex");
+        if (busqueda_recetas_duplicadas(Id)) {
+            res.send("La receta ya estaba añadida");
+        }else{
+          var db = firebase.database();
+          var ref = db.ref("recetasDB")
+          var usersRef = ref.child('recetas');
+          usersRef.push({
+              id: Id,
+              titulo: title,
+              descripcion: description,
+              duracion: duration,
+              ingredientes: ingredients
+          });
+          res.send('receta añadida');
+        }
     }
+});
+
+app.get("/receta/list", function(req, res) {
+    // Get a database reference to our posts
+    var db = firebase.database();
+    var ref = db.ref("recetasDB/recetas");
+
+    // Attach an asynchronous callback to read the data at our posts reference
+    ref.on("value", function(snapshot, prevChildKey) {
+        var newPost = snapshot.val();
+        console.log("titulo: " + newPost.titulo);
+        console.log("descripcion: " + newPost.descripcion);
+        console.log("duracion: " + newPost.duracion);
+        console.log("ingredientes: " + newPost.ingredientes);
+        console.log("Previous Post ID: " + prevChildKey);
+        console.log("---------------------------");
+        res.send(newPost);
+    });
 });
 
 app.post("/token-device/:nombre", function(req, res) {
@@ -75,5 +97,18 @@ router.get('/', function(req, res) {
 app.use(router);
 
 app.listen(8080, function() {
-    console.log("Node server running on http://localhost:3000");
+    console.log("Node server running on http://localhost:8080");
 });
+
+function busqueda_recetas_duplicadas(id) {
+    var db = firebase.database();
+    var enc = false;
+    var ref = db.ref("recetasDB/recetas");
+    ref.orderByChild("id").equalTo(id).on("child_added", function(snapshot) {
+        if (snapshot.numChildren() === 0) {
+          console.log("entor");
+            enc = true;
+        }
+    });
+    return enc;
+}
